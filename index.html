@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion etudiants</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"><!--j'ai choiisi la version min car il se charge rapidement  -->
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js" defer type="module"></script><!---pourquoi ici on a fait defer type="module"-->
+</head>
+<body>
+        <div class="container">
+            <div id="app">
+                <h1>Ajouter Etudiants</h1>
+                
+                
+                <form method="Post">
+                    <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input  type="text" class="form-control" name="name" id="name"  /> 
+                </div>
+                   <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input  type="date" class="form-control" name="date" id="date"  /> 
+                </div>
+                   <div class="mb-3">
+                    <label for="note" class="form-label">Note</label>
+                    <input  type="number"  max="20" min="0" step="0.1" class="form-control" name="note" id="note"  /> 
+                </div>
+                <div class="mb-3">
+                    <button class="form-control btn btn-success" id="ajouter_etudiant">Ajouter Etudiants</button><!--form control dans la classe pour qu'il prend tous la ligne -->
+                </div>
+                </form>
+                <h1>Liste Des etudiants</h1>
+                <span><button class="btn btn-primary" id="refresh" >Actualiser La Liste </button> </span>
+                <span><div class="btn-group">
+                    <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="triggerId"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        trier par 
+                    </button>
+                    <div
+                        class="dropdown-menu dropdown-menu-start"
+                        aria-labelledby="triggerId"
+                    >
+                        <button class="dropdown-item "  id="id_desc"  >id desc </button>
+                        <button class="dropdown-item" id="id_asc">id asc</button>
+                        
+                        <button class="dropdown-item "  id="note_desc" >note desc</button>
+
+                        
+
+                        <button class="dropdown-item" id="note_asc"> note asc</button>
+
+                        <button class="dropdown-item" id="name_desc">name desc</button>
+
+                        <button class="dropdown-item" id="name_asc">name asc</button>
+
+                        <button class="dropdown-item" id="date_desc">age asc</button><!--car age et date sont non proportionnell-->>
+                        <button class="dropdown-item" id="date_asc">age desc</button>
+
+                        
+
+                       
+                    </div>
+                </div>
+                </span>
+                
+                <div
+                    class="table-responsive"
+                >
+                    <table
+                        class="table ">
+                        <thead>
+                            <tr class="table-primary"> <!--pour que la premier ligne soit en bleu-->
+                                <th scope="col">#id</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Note</th>
+                                <th scope="col">Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body"><!--class sert aussi pour java script-->
+                          
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+
+        
+      
+        
+
+
+        
+</body>
+</html>

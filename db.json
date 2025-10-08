@@ -1,0 +1,28 @@
+{
+  "etudiant": [
+    {
+      "id": 1,
+      "name": "zakariae",
+      "date": "2003",
+      "note": 18
+    },
+    {
+      "id": 2,
+      "name": "Ahmed",
+      "date": "2000",
+      "note": 19
+    },
+    {
+      "name": "ff",
+      "date": "2025-09-22",
+      "note": "12",
+      "id": 8
+    },
+    {
+      "name": "uu",
+      "date": "2025-09-10",
+      "note": "9",
+      "id": 14
+    }
+  ]
+}

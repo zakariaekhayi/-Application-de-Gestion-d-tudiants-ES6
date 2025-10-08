@@ -1,0 +1,57 @@
+il y a une autre cmd qui fait un autre travaill 
+
+cmd 
+host -a uit.ac.ma dns.uit.ac.ma 
+
+on a le domainer principal , (je veux me connecter a un serveur de dns de base de donne) 
+
+
+c'est comme dig mais on peut la automatiser 
+
+
+host permet le transfere de zone , dans le cas securise, le transfere de zone il ne dois jamais permer le transfer de zone 
+host -a uit.ac.ma dns.uit.ac.ma
+
+c'est a dire que le serveur de uit refuse le transfert de zone de la base de donnee vers .. 
+host 
+
+
+
+host -l 2m.ma dnspub2.2m.ma
+
+il n'est pas autorise 
+
+voila la connexion il est sucess il a afficher des donnes  donc le serveur dns de 2m n'est pas sicurise 
+
+il tranferer tout le contenue la base de donnes de serveur   ce qu'on a appelle un transfere de zone 
+
+
+l'obj
+
+
+for PC in $(cat liste2025.txt); do host $PC.uit.ac.ma ; done 
+
+host sans option 
+
+for ip in $(seq 1 100); do host 212.213.46.$ip; done 
+
+c'est la commande inverse 
+
+
+dnseum --enum uit.ac.ma[domaine name ]
+
+https://dnsdumpster.com/
+le role pour voir .. 
+
+
+
+
+whatweb -v https://www.uit.ac.ma
+=> ce site est faite par html 5 et next.js
+
+
+searchsplit wordpress 6.8 
+
+pour voir s'il y  a des failles dans le langage
+
+lbd www.avito.ma

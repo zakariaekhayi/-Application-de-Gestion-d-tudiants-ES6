@@ -1,0 +1,143 @@
+Alahoma laka Alhamd 
+alhamdo li Allah 
+
+Allahoma 7fedna min kouli charin w asou2 
+
+toujour dit est ce qu'il a un oublie 
+comme oublie de () dans fonction et conternt-ty[e
+ 
+
+rakez 3la scoping mazayan f html et java script  w faker kharij sandou9
+
+
+
+2-installation npm
+1-extension bs5
+2-folder js et css 
+
+6-fichiers  db.json index.html script.js custom.css  configuration.js
+etudiant.js
+
+
+a prendre en consideration 
+1- j'oublie les declaration des fonction et des varibles comme const static .. => type error
+
+
+
+===========================================
+j'ai utilise 
+0-container app 
+1- map  pour map on peut utiliser deux return pour stocker l'un dans l'autre 
+exemple 
+const displayuser=()={return response.map((etudiant) => {
+  return (
+    <tr>
+      <td>{etudiant.name}</td>
+      <td>{etudiant.date}</td>
+      <td>{etudiant.note}</td>
+    </tr>
+  );
+});
+}
+
+et pour supprimer le , entre les differents return fait  displayuser.join('')
+2-document.query selector('.class').innerhtml= dqsi et class et id  sert aussi pour js n'est pas seulement css : si class est occupe alors utiliser id 
+3-fetch await async ET et on peut faire 
+fetch avec method "POST"
+4- j'ai utuilise template literals `` et ${} pour les varibles 
+`<tr>
+                <td>${etuidant.id}</td>
+                <td>${etudiant.name}</td>
+                <td>${etudiant.}</td>
+                <td></td>
+                
+        <tr>
+        `
+
+5- on utulise await pour attendre le resultat et apres on execute les autres ligne c'est tres important au cas ou on a chargmenet d'un atbleau avec des objet d'un endpoint json si on fait pas await il va afficher undefined et il tableau sera affihce apres l'execution et non pas avant 
+
+6-tu a oublie le + que tu peut concatener  dans map et foreach pour avoir plusieur tr et non pas le dernier seuleemtn et que le tr n'ecrase pas le tr qui est ete precendent    table_body.innerhtml+=
+
+pour ne pas ecraser 
+on a soit : 
+
+
+a=a+i;
+soit 
+a+=i;
+7- j'ai utlise dans et btn btn-primarry et aussi table table-primary ..pour les bouton et les tableau si ce n'est pas de meme nature et c'est un elemen dans table on met seuelemt le dexiem class 
+ <tr class="table-primary">
+	
+</tr> 
+.text-primary: Blue, used for important content.
+
+.text-secondary: Gray, for secondary content.
+
+.text-success: Green, indicates success.
+
+.text-danger: Red, represents danger or errors.
+
+.text-warning: Yellow, for warnings.
+
+.text-info: Cyan, for informational content.
+
+.text-light: Light gray, best used on dark backgrounds.
+
+.text-dark: Black or dark gray, for standard text.
+
+.text-muted: Muted gray, for less prominent content.
+
+.text-white: White, ideal for dark backgrounds.
+
+8-j'ai utiliser  bs5-form-email et pour methode on fait post on a pas d'acton 
+car c'est js  et j'ai utiliser type="Numer" max="20" min .. step="0.1"
+9-document.queryselecotr(#ajouter).addeventlistner('click',(e)=>{
+e.preventDefault()
+})
+
+9- j'ai travailler avec POST EN FAISANT
+CONST REQUEST={
+method:"POST",
+headers:{'content-type':'application/json'}
+body:JSON.STRINGFY({
+name:this.name}
+	
+)
+}
+addetudiant=async function(){
+const request=await fetch(ENDPOINT,REQUEST)
+
+}
+}
+
+10-window.supprimer_etudiant 
+pour rendre la fonction global 
+<td><button class="btn btn-danger" class="supprimer" onclick="supprimer_etudiant(${etudiant.id})">supprimer</button></td>
+window.supprimer_etudiant = function(id) {
+    console.log("Suppression de l'étudiant", id);
+}
+
+
+11-j'ai travailler avec la fonction sort((a,b)=>b.id-a.id)pour nombre 
+
+
+12-j'ai travailler avec la fonction localecompare dans sort pour trier en fonction de strings 
+allObjects.sort((a,b)=>b.name.localecompare(a.name)) pour desc
+
+13-pour savoir le length d'une liste des objet et des objet => Object.keys(object_name).length
+
+14-Uncaught (in promise) TypeError: Cannot read properties of null (reading 'addEventListener')
+ignifie que l’un de tes bouton comme
+
+trier_id_asc, trier_id_desc, trier_note_asc, trier_note_desc, trier_name_asc
+
+
+n’existe pas dans ton HTML au moment où ton script s’exécute.
+15 - a chaque fois vous voullez traiter la date avec type Date soit tu veut faire une operration ou comparaison , il faut faire  new Date(a.date) pour la nomraliser  
+
+ankoun zedt chi 7aja wla n9asset chi 7aja b7al matla dans html je fait id="#name " cela declenche l'erreur uncauch in promise type error event listeren ...=> normalament c'est id="name"
+ alletudiant.sort((a,b)=>new Date(a.date)-new Date(b.date))
+  let age=new Date().getFullYear()-new Date(etudiant.date).getFullYear();
+====================
+le ramasse de tous les mots cle que j'ai tuilise 
+en prenant ligne par ligne 
